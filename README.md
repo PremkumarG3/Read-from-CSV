@@ -15,26 +15,22 @@ Use len() method to get the number of rows and columns and 'shape' attribute to 
 Print the output and end the program.
 ## PROGRAM:
 ```
-#program to implement multivariate linear regression 
+#program to read contents from a csv file
 #developed by : PREM KUMAR G
 #register no:23003614
 
-import pandas as ps
-from sklearn import linear_model
-data=ps.read_csv("cars.csv")
-x=data[['Weight','Volume']]
-y=data[['CO2']]
-regr=linear_model.LinearRegression()
-regr.fit(x,y)
-print('Coefficients:',regr.coef_)
-print('Intercept:',regr.intercept_)
-predict=regr.predict([[3300,1300]]) 
-print('Predicted CO2 for for the corresponding weight and volume',predict)
+import pandas as pd
+df=pd.read_csv('cars.csv')
+print(df.head(10))
+print(df.tail(5))
+print("Number of rows:",len(df.axes[0]))
+print("Number of columns:",len(df.axes[1]))
+print(df.shape)
 ```
 
 ## OUTPUT:
 
-![image](https://github.com/PremkumarG3/Read-from-CSV/assets/138955646/db3a0ef7-56cc-4cf8-8a00-c7f2b25a493b)
+![WhatsApp Image 2024-01-03 at 19 41 30_6f85858c](https://github.com/PremkumarG3/Read-from-CSV/assets/138955646/47a52e8d-8ebc-48d4-9982-f7441d91d5e3)
 
 ## RESULT:
 Thus a python program is written to read the contents of a CSV file.
